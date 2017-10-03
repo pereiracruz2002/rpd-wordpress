@@ -1,0 +1,217 @@
+.azul{
+  background-color: blue;
+}
+.vermelho{
+  background-color: red;
+}
+.fundo_azul{
+  height: 40px;
+  background-color: #0D1824;
+}
+.carousel{
+  text-align: center;
+  margin-top: -50px;
+}
+.endereco_topo{
+  float: left;
+  margin-top: -30px;
+  color: white;
+  font-size: 12px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+.contato_topo{
+  margin-left: 450px;
+  margin-top: -30px;
+  color: white;
+  font-size: 12px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+.midias_topo{
+  margin-top: -30px;
+  color: white;
+  font-size: 12px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+.logo{
+  margin-top: 20px;
+}
+.fundo_rodape{
+  height: 100px;
+  background-color: #0D1824;
+}
+.txt_rodape{
+  font-size: 14px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: -80px;
+  line-height: 30px;
+  color: white;
+  letter-spacing: 3px;
+}
+.tit_index{
+  text-align: justify;
+  font-family: serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.txt_index{
+  text-align: justify;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 30px;
+}
+.tit_h4{
+  text-align: justify;
+  font-family: serif;
+  font-size: 35px;
+}
+.tit_clipping{
+  text-align: justify;
+  font-family: serif;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: bold;
+}
+.txtindexclipping{
+  text-align: justify;
+  font-family: sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+.dataindex{
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+.box{
+	/*definimos a largura do box*/
+	width:600px;
+	/* definimos a altura do box */
+	height:160px;
+	/* definimos a cor de fundo do box */
+	background-color:#CBAF63;
+}
+.txtbox{
+  font-family: serif;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  line-height: 50px;
+}
+.box_azul{
+  /*definimos a largura do box*/
+  width:400px;
+  /* definimos a altura do box */
+  height:160px;
+  /* definimos a cor de fundo do box */
+  background-color:#0D1824;
+}
+.campo_nome, .campo_email{
+  font-family: serif;
+  font-size: 20px;
+  color: #CCCCCC;
+}
+.submit{
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #CCCCCC;
+  background-color:#0D1824;
+  width:100px;
+  /* definimos a altura do box */
+  height:20px;
+  border-color: #0D1824;
+}
+.form{
+  margin-top: 15px;
+}
+.fa-map-marker, .fa-mobile, .fa-paper-plane, .fa-clock-o{
+  color: #CBAF63;
+  text-align: center;
+}
+.endindex{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.fundo_topo{
+  background-color: #DDDDDD;
+  height: 90px;
+  margin-top: -13px;
+}
+.titesq_interno{
+  font-family: serif;
+  font-size: 25px;
+  margin-top: -75px;
+}
+.subtitesq_interno{
+  font-family: serif;
+  font-size: 15px;
+  margin-top: -6px;
+}
+.titdir_interno{
+  font-family: serif;
+  font-size: 25px;
+  margin-top: -65px;
+}
+.txt_empresa{
+  font-family: sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: justify;
+}
+.pic_empresa{
+  margin-top: -20px;
+}
+.tit_equipe{
+  font-family: serif;
+  font-size: 25px;
+  margin-top: 20px;
+}
+.txt_equipe{
+  text-align: justify;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: sans-serif;
+}
+@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+
+.logo{
+  text-align: center;
+}
+.fundo_rodape{
+  height: 150px;
+  background-color: #0D1824;
+}
+.txt_rodape{
+  font-size: 12px;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: -120px;
+  line-height: 30px;
+  color: white;
+  letter-spacing: 3px;
+}
+.tit_h4{
+  text-align: center;
+  font-family: serif;
+  font-size: 33px;
+}
+.titesq_interno{
+  text-align: center;
+  font-family: serif;
+  font-size: 23px;
+  margin-top: -90px;
+}
+.titdir_interno{
+  text-align: center;
+  font-family: serif;
+  font-size: 18px;
+  margin-top: -60px;
+}
+
+}
