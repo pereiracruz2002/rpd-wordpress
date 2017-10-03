@@ -84,7 +84,7 @@ $table_prefix  = 'rpd_';
  * @link https://codex.wordpress.org/pt-br:Depura%C3%A7%C3%A3o_no_WordPress
  */
 define('WP_DEBUG', false);
-/*B^25mVh$)D9Z4Q8d3E*/
+
 /* Isto é tudo, pode parar de editar! :) */
 
 /** Caminho absoluto para o diretório WordPress. */
