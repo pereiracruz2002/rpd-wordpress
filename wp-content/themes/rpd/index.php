@@ -1,13 +1,27 @@
 <?php get_header(); ?>
+<!-- INICIO BANNER -->
+<div class="hide-for-small-only hide-for-medium-only">
+
+<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1347px; height: 455px;  overflow: hidden; visibility: hidden; ">
+  <!-- Loading Screen -->
+
+  <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+
+    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
+    </div>
+
+    <div style="position:absolute;display:block;background:url('banner/loading.gif') no-repeat center center; top:0px; left:0px; width:100%; height:100%;">
+    </div>
+  </div>
  <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1347px; height: 455px; overflow: hidden;">
 
 
     <?php
         global $wp_query;
-        $args = array( 'post_type' => 'banners','orderby' => 'post_date',
+        $args2 = array( 'post_type' => 'banners','orderby' => 'post_date',
                           'order'=> 'DESC',
                           'numberposts'     => 8 );
-        query_posts( $args );
+        query_posts( $args2 );
         $i = 0;
          while ( have_posts() ) : the_post();
          $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
@@ -55,9 +69,11 @@
   <?php
 
 // The Loop
-$args = array( 'orderby' => 'post_date',
+  wp_reset_query();
+$args = array('post_type' => 'novidades', 'orderby' => 'post_date',
                 'order'=> 'DESC',
                 'numberposts'     => 3 );
+query_posts( $args );
 while ( have_posts() ) : the_post(); ?>
 <?php $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
 

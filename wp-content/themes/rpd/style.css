@@ -172,12 +172,27 @@
   font-size: 25px;
   margin-top: 20px;
 }
-.txt_equipe{
+.txt_equipe,.txt_equipe p{
   text-align: justify;
   font-size: 15px;
   line-height: 30px;
   font-family: sans-serif;
 }
+
+#content1 p,#content2 p,#content3 p,#content4 p,#content5 p{
+  margin-bottom: 0;
+}
+
+#tab1:checked ~ #content1 p, #tab2:checked ~ #content2 p, #tab3:checked ~ #content3 p, #tab4:checked ~ #content4 p{
+  display: block;
+  font-size: 15px;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  line-height: 40px;
+  margin-top: 0;
+}
+
+
 @media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
 
 .logo{

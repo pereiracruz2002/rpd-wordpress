@@ -18,14 +18,15 @@
     <title>Romaro & Paixão Dias Advogados</title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/foundation.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/menu.css">
-
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/font-awesome.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/banner.min.css" />
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/cdtop.css"> <!-- Gem style -->
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/tab.css" />
     
   
     <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr.js"></script>
@@ -77,7 +78,7 @@
 
 'link_before' => '',
 
-'link_after' => ' | ',
+'link_after' => ' ',
 
 'depth' => 0,
 
@@ -109,21 +110,8 @@
     </div>-->
   </div>
 </div> 
-<!-- INICIO BANNER -->
-<div class="hide-for-small-only hide-for-medium-only">
 
-<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1347px; height: 455px;  overflow: hidden; visibility: hidden; ">
-  <!-- Loading Screen -->
 
-  <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-
-    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
-    </div>
-
-    <div style="position:absolute;display:block;background:url('banner/loading.gif') no-repeat center center; top:0px; left:0px; width:100%; height:100%;">
-    </div>
-
-  </div>
 
  
   
