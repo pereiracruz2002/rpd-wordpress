@@ -53,7 +53,41 @@
 <div class="row">
   <div class="large-3 columns logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png"></img></div>
   <div class="large-9 columns">
-    <div id='cssmenu'>
+    <?php
+      wp_nav_menu( array(
+'menu' => 'meu_menu',
+
+'theme_location' => 'meu_menu',
+
+'container' => 'div',
+
+'container_class' => 'classe_do_container',
+
+'container_id' => 'cssmenu',
+
+'menu_class' => 'classe_do_menu',
+
+'echo' => true,
+
+'menu_id' => 'cssmenu',
+
+'before' => '',
+
+'after' =>'',
+
+'link_before' => '',
+
+'link_after' => ' | ',
+
+'depth' => 0,
+
+'walker' => '',
+
+) );
+
+
+      ?>
+   <!--  <div id='cssmenu'>
     <ul>
        <li><a href='#'>Home</a></li>
        <li><a href='sobre-nos.php'>Sobre nós</a></li>
@@ -72,9 +106,9 @@
        <li><a href='#'>Clipping</a></li>
        <li><a href='#'>Fale Conosco</a></li>
     </ul>
-    </div>
+    </div>-->
   </div>
-</div>
+</div> 
 <!-- INICIO BANNER -->
 <div class="hide-for-small-only hide-for-medium-only">
 
@@ -91,62 +125,5 @@
 
   </div>
 
-  <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1347px; height: 455px; overflow: hidden;">
-
-    <div data-p="225.00" style="display: none;" >
-      <a href="#">
-        <img data-u="image" src="<?php echo get_template_directory_uri(); ?>/banner/banner1.png"/>
-      </a>
-    </div>
-
-    <div data-p="225.00" style="display: none;">
-      <a href="#">
-        <img data-u="image" src="<?php echo get_template_directory_uri(); ?>/banner/banner2.png"/>
-      </a>
-    </div>
-
-
-    <div data-u="caption" data-t="5" style="position: absolute; top: 120px; left: 650px; width: 470px; height: 220px;">
-      <div style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px; overflow: hidden;"></div>
-    </div>
-  </div>
-  <!-- Bullet Navigator -->
-  <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
-    <!-- bullet navigator item prototype -->
-    <div data-u="prototype" style="width:16px;height:16px;"></div>
-  </div>
-  <!-- Arrow Navigator -->
-  <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
-  <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
-</div>
-</div>
-<!-- FIM BANNER -->
-
-<!-- INICIO CAROUSEL-->
-<div class="row carousel">
-  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
-  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
-  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
-</div>
-<!-- FIM CAROUSEL -->
-<!-- FIM MENU -->
-  <!-- fim header -->
-      <?php
-      wp_nav_menu( array(
-'menu' => 'meu_menu',
-'theme_location' => 'meu_menu',
-'container' => 'div',
-'container_class' => 'classe_do_container',
-'container_id' => 'menu_principal',
-'menu_class' => 'classe_do_menu',
-'echo' => true,
-'menu_id' => 'menu_topo',
-'before' => '',
-'after' =>'',
-'link_before' => '',
-'link_after' => ' | ',
-'depth' => 0,
-'walker' => '',
-) );
-      ?>
+ 
   

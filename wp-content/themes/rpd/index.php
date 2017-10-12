@@ -1,21 +1,80 @@
 <?php get_header(); ?>
+ <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1347px; height: 455px; overflow: hidden;">
+
+
+    <?php
+        global $wp_query;
+        $args = array( 'post_type' => 'banners','orderby' => 'post_date',
+                          'order'=> 'DESC',
+                          'numberposts'     => 8 );
+        query_posts( $args );
+        $i = 0;
+         while ( have_posts() ) : the_post();
+         $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
+                  
+                  <div data-p="225.00" style="display: none;">
+      <a href="#">
+        <img data-u="image" src="<?php echo $banner[0];?>"/>
+      </a>
+    </div>
+            <?php
+            $i++;
+            endwhile;
+            // Reset Query
+            wp_reset_query();
+          ?>
+
+
+    <div data-u="caption" data-t="5" style="position: absolute; top: 120px; left: 650px; width: 470px; height: 220px;">
+      <div style="position: absolute; top: 4px; left: 45px; width: 379px; height: 213px; overflow: hidden;"></div>
+    </div>
+  </div>
+  <!-- Bullet Navigator -->
+  <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+    <!-- bullet navigator item prototype -->
+    <div data-u="prototype" style="width:16px;height:16px;"></div>
+  </div>
+  <!-- Arrow Navigator -->
+  <span data-u="arrowleft" class="jssora22l" style="top:0px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
+  <span data-u="arrowright" class="jssora22r" style="top:0px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
+</div>
+</div>
+<!-- FIM BANNER -->
+
+<!-- INICIO CAROUSEL-->
+<div class="row carousel">
+  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
+  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
+  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
+</div>
+<!-- FIM CAROUSEL -->
+<!-- FIM MENU -->
+  <!-- fim header -->
 <!-- INICIO CORPO-->
 <div class="row">
-  <div class="large-5 columns"><img src="<?php echo get_template_directory_uri(); ?>/img/pic_advs.png"></img></div>
+  <?php
+
+// The Loop
+$args = array( 'orderby' => 'post_date',
+                'order'=> 'DESC',
+                'numberposts'     => 3 );
+while ( have_posts() ) : the_post(); ?>
+<?php $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
+
+  <div class="large-5 columns">
+    <img src="<?php echo get_template_directory_uri(); ?>/img/pic_advs.png"></img></div>
   <div class="large-6 columns">
-    <div class="tit_index">ROMARO & PAIXÃO DIAS ADVOGADOS<br>
-      é especializado na defesa dos direitos de aposentados e <br>pensionistas do INSS,
-      e em Direito Imobiliário consultivo.
+    <div class="tit_index"><?php the_title();?>
     </div>
     <br>
      <div class="txt_index">
-       Fundado em 2013, nosso escritório tem por missão buscar formas
-        adequadas para a defesa dos interesses de nossos clientes, utilizando-se
-        da negociação, mediação e conciliação como ferramentas principais para
-        sua atuação, evitando a propositura de dispendiosos e
-        morosos processos judiciais.
+        <?php echo abreviaString(get_the_content(),200,'[...]'); ?>
      </div>
   </div>
+<?php endwhile;?>
+<?php
+    wp_reset_query();
+?>
 <div class="large-1 columns end"></div>
 
 </div>
@@ -25,7 +84,29 @@
 <!-- INICIO BLOG-->
 <div class="row">
 <h4 class="tit_h4">Artigos em Destaque no Clipping</h4>
+
+<?php
+// The Loop
+global $wp_query;
+$args = array( 'post_type' => 'novidades' );
+query_posts( $args );
+$i = 0;
+ while ( have_posts() ) : the_post();?>
+<?php $banner = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'big' ); ?>
+
+
+
 <div class="large-4 columns">
+  <img src="<?php echo $banner[0];?>"></img>
+  <br>
+  <div class="tit_clipping"><?php the_title();?></div><br>
+  <div class="txtindexclipping">
+  <?php echo abreviaString(get_the_content(),200,'[...]'); ?>
+  </div>
+  <div class="dataindex"><i class="fa fa-calendar-o"></i> <?php the_date() ?></div>
+</div>
+<?php endwhile;?>
+<!-- <div class="large-4 columns">
   <img src="<?php echo get_template_directory_uri(); ?>/img/fotoblog1.png"></img>
   <br>
   <div class="tit_clipping">Romaro & Paixão Dias orientam
@@ -39,20 +120,6 @@
   <div class="dataindex"><i class="fa fa-calendar-o"></i> 01/10/2017</div>
 </div>
 
-<div class="large-4 columns">
-  <img src="<?php echo get_template_directory_uri(); ?>/img/fotoblog1.png"></img>
-  <br>
-  <div class="tit_clipping">Romaro & Paixão Dias orientam
-    população através das rádios locais</div><br>
-  <div class="txtindexclipping">
-  Romaro & Paixão Dias Advogados esteve recentemente,
-  em duas das mais conceituadas rádios de São Carlos
-  explicando e respondendo questionamentos dos ouvintes
-  sobre Direito Previdenciário e […]
-  </div>
-  <div class="dataindex"><i class="fa fa-calendar-o"></i> 01/10/2017</div>
-</div>
-
 
 <div class="large-4 columns">
   <img src="<?php echo get_template_directory_uri(); ?>/img/fotoblog1.png"></img>
@@ -66,7 +133,7 @@
   sobre Direito Previdenciário e […]
   </div>
   <div class="dataindex"><i class="fa fa-calendar-o"></i> 01/10/2017</div>
-</div>
+</div> -->
 </div>
 <!-- FIM BLOG-->
 <br>
