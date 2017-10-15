@@ -12,17 +12,20 @@ register_nav_menu( 'segundo_menu', 'Este é meu segundo menu' );
 
 //add_theme_support('artigos-thumbnails', array('artigos'));
 
-if (function_exists('register_sidebar')) {
-     register_sidebar(array(
-      'name' => 'Sidebar Widgets',
-      'id'   => 'sidebar-widgets',
-      'description'   => 'Widget Area',
-      'before_widget' => '<div id="one" class="two">',
-      'after_widget'  => '</div>',
-      'before_title'  => '<h2>',
-      'after_title'   => '</h2>'
-     ));
+function smallenvelop_widgets_init() {
+    register_sidebar( array(
+        'name' => __( 'Header Sidebar', 'smallenvelop' ),
+        'id' => 'header-sidebar',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '<h1>',
+        'after_title' => '</h1>',
+    ) );
 }
+add_action( 'widgets_init', 'smallenvelop_widgets_init' );
+
+
+
 
 
 add_action( 'init', 'create_post_type_banners' );
@@ -46,6 +49,22 @@ function create_post_type_novidades() {
             'labels' => array(
                 'name' => __( 'Novidades' ),
                 'singular_name' => __( 'Novidade' )
+            ),
+            'public' => true,
+            'supports' => array('title','editor','thumbnail')
+        )
+    );
+}
+
+
+
+add_action( 'init', 'create_post_type_blocos' );
+function create_post_type_blocos() {
+    register_post_type( 'blocos',
+        array(
+            'labels' => array(
+                'name' => __( 'Blocos' ),
+                'singular_name' => __( 'Bloco' )
             ),
             'public' => true,
             'supports' => array('title','editor','thumbnail')

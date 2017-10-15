@@ -16,8 +16,18 @@
 <div class="row">
   <div class="small-12 medium-12 large-6 columns">
     <h5>Preencha o formulário de contato</h5>
+     <?php 
+        while (have_posts()) {
+          the_post();
+        ?>
+         
+          <?php the_content(); ?>
 
-    <div class="">
+          <?php
+        } //endwhile;
+        ?> 
+
+   <!--  <div class="">
        <input type="text" class="form-control" id="form-name" name="form-name" placeholder="Nome" required>
     </div>
     <div class="">
@@ -35,6 +45,7 @@
     <div class="">
         <button type="submit" class="btn btn-default button">Enviar</button>
     </div>
+  </div> -->
   </div>
 
   <div class="small-12 medium-12 large-6 columns">

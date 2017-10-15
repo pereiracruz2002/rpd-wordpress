@@ -12,7 +12,7 @@ Desenvolvido por Aizu Consultoria Digital</div>
 
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ 
   <script src="<?php echo get_template_directory_uri(); ?>/js/index.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/foundation.min.js"></script>
@@ -22,5 +22,7 @@ Desenvolvido por Aizu Consultoria Digital</div>
 
   <script> jssor_1_slider_init(); </script>
   <script>$(document).foundation();</script>
+  <script type='text/javascript' src='http://localhost.rpd.com.br/wp-content/plugins/tiny-carousel-horizontal-slider/inc/jquery.tinycarousel.js?ver=4.8.1'>
+  <?php wp_footer(); ?> 
 </body>
 </html>

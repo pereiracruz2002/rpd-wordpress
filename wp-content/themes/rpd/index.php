@@ -57,9 +57,11 @@
 
 <!-- INICIO CAROUSEL-->
 <div class="row carousel">
-  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
-  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
-  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
+<?php echo TinyCarousel('1'); ?>
+
+
+<!--   <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div>
+  <div class="large-4 columns "><img src="<?php echo get_template_directory_uri(); ?>/img/direito_previdenciario.png"></img></div> -->
 </div>
 <!-- FIM CAROUSEL -->
 <!-- FIM MENU -->
@@ -104,7 +106,7 @@ while ( have_posts() ) : the_post(); ?>
 <?php
 // The Loop
 global $wp_query;
-$args = array( 'post_type' => 'novidades' );
+$args = array( 'cat' => 5 );
 query_posts( $args );
 $i = 0;
  while ( have_posts() ) : the_post();?>
@@ -164,11 +166,12 @@ clipping por e-mail!
   </div>
 
   <div class="large-6 columns box_azul">
-    <form class="form">
+    <!-- <form class="form">
       <input class="campo_nome" type="text" placeholder="nome">
       <input class="campo_email" type="email" placeholder="email">
         <input class="submit" type="submit" value="Quero Receber!">
-    </form>
+    </form> -->
+    <?php eemail_show(); ?>
     </div>
 
 </div>
