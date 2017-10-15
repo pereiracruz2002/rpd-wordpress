@@ -10,6 +10,18 @@ register_nav_menu( 'segundo_menu', 'Este é meu segundo menu' );
 
 }
 
+add_filter( 'single_template', 'my_single_template' );
+function my_single_template($single_template)
+{
+    if (in_category(5)) {
+        $file = get_template_directory().'/single-cat-5.php';
+        if ( file_exists($file) ) {
+            return $file;
+        }
+    }
+    return $single_template;
+}
+
 //add_theme_support('artigos-thumbnails', array('artigos'));
 
 function smallenvelop_widgets_init() {
@@ -18,8 +30,8 @@ function smallenvelop_widgets_init() {
         'id' => 'header-sidebar',
         'before_widget' => '<div>',
         'after_widget' => '</div>',
-        'before_title' => '<h1>',
-        'after_title' => '</h1>',
+        'before_title' => '<h5>',
+        'after_title' => '</h5>',
     ) );
 }
 add_action( 'widgets_init', 'smallenvelop_widgets_init' );
